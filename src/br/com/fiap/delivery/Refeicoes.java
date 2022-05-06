@@ -1,3 +1,4 @@
+package br.com.fiap.delivery;
 
 public class Refeicoes extends Produtos {
 
@@ -12,6 +13,11 @@ public class Refeicoes extends Produtos {
 		super(nomeProduto, valor);
 		this.nacionalidade = nacionalidade;
 		this.qtdeCalorias = qtdeCalorias;
+	}
+
+	@Override
+	public double getValor() {
+		return super.getValor() * 0.95;
 	}
 
 	public String getNacionalidade() {
